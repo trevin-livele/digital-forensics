@@ -1,0 +1,106 @@
+.whole{
+    margin-top: 50px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    height: 100px;
+    position: relative; /* Add position relative */
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .value {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    font-size: 24px;
+    position: absolute; /* Add position absolute */
+    left: 10px; /* Add left positioning */
+    bottom: 10px; /* Add bottom positioning */
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .card {
+      height: auto;
+      max-width: 300px;
+    }
+  }
+  
+
+  .card:nth-child(1) {
+    background-color: #ff8080; /* Example color */
+  }
+  
+  .card:nth-child(2) {
+    background-color: #80ff80; /* Example color */
+  }
+  
+  .card:nth-child(3) {
+    background-color: #8080ff; /* Example color */
+  }
+  
+  .card:nth-child(4) {
+    background-color: #ffff80; /* Example color */
+  }
+  
+  .card:nth-child(5) {
+    background-color: #ff8080; /* Example color - Shade 1 */
+  }
+  
+  .card:nth-child(6) {
+    background-color: #ff9999; /* Example color - Shade 2 */
+  }
+  
+  .card:nth-child(7) {
+    background-color: #ffcccc; /* Example color - Shade 3 */
+  }
+  
+  .card:nth-child(8) {
+    background-color: #ffeb99; /* Example color - Shade 4 */
+  }
+  
+  .card:nth-child(9) {
+    background-color: #80ff80; /* Example color - Shade 1 */
+  }
+  
+  .card:nth-child(10) {
+    background-color: #99ff99; /* Example color - Shade 2 */
+  }
+  
+  .card:nth-child(11) {
+    background-color: #ccffcc; /* Example color - Shade 3 */
+  }
+  
+  .card:nth-child(12) {
+    background-color: #ebffeb; /* Example color - Shade 4 */
+  }
+  

@@ -1,0 +1,102 @@
+<mat-toolbar>
+  <div>
+    <button mat-icon-button class="menu-icon" (click)="sideNav.toggle()">
+      <mat-icon *ngIf="!sideNav.opened"> menu </mat-icon>
+      <mat-icon *ngIf="sideNav.opened"> close </mat-icon>
+    </button>
+  </div>
+  <div class="navigation">
+    <h5>{{ currentDate | date }}</h5>
+    <div class="vertical-line"></div>
+    <h6>Admin</h6>
+    <mat-icon class="account-circle">account_circle</mat-icon>
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container [hasBackdrop]="false">
+  <mat-sidenav opened #sideNav="matSidenav" class="mat-elevation-z10">
+    <i class="fa-solid fa-screwdriver-wrench fa-spin"></i>
+    <div class="logo">
+      <a a routerLink="/dashboard" class="simple-text logo-mini">
+        <div>
+          <img
+            src="../../../assets/images/forensics.png"
+            class="logo-img"
+            alt=""
+          />
+        </div>
+      </a>
+    </div>
+    <mat-divider></mat-divider>
+
+    <button
+      mat-button
+      class="menu-button"
+      a
+      routerLink="/dashboard"
+      routerLinkActive="active"
+    >
+      <i class="fa-solid fa-chart-line fa-beat-fade"></i>
+      <span>Dashboard</span>
+    </button>
+
+    <button
+      class="menu-button"
+      data-bs-toggle="collapse"
+      role="button"
+      aria-expanded="false"
+      aria-controls="multiCollapseExample1"
+      routerLink="/data-analysis"
+    >
+      <i class="fa-solid fa-screwdriver-wrench fa-spin"></i> Data Analysis
+    </button>
+    <ng-template class="collapse multi-collapse" id="multiCollapseExample1">
+    </ng-template>
+    <button
+      class="menu-button"
+      data-bs-toggle="collapse"
+      role="button"
+      aria-expanded="false"
+      aria-controls="messagingService"
+      routerLink="/case-management"
+
+    >
+      <i class="fa-sharp fa-solid fa-envelope-open-text"></i> Case Management
+    </button>
+    <ng-template class="collapse multi-collapse" id="messagingService">
+    </ng-template>
+
+    <button
+      class="menu-button"
+      data-bs-toggle="collapse"
+      role="button"
+      aria-expanded="false"
+      aria-controls="manageContacts"
+      routerLink="/reporting"
+    >
+      <i class="fa-solid fa-id-card"></i> Reporting
+    </button>
+    <ng-template class="collapse multi-collapse" id="manageContacts">
+    </ng-template>
+    <button
+      class="menu-button"
+      data-bs-toggle="collapse"
+      role="button"
+      aria-expanded="false"
+      aria-controls="smsDeliveryReports"
+      routerLink="/settings"
+
+    >
+      <i class="fa-sharp fa-solid fa-comment-dots"></i> Settings
+    </button>
+    <ng-template class="collapse multi-collapse" id="smsDeliveryReports">
+    </ng-template>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="container">
+      <div class="row">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
