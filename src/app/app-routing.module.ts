@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'auth/login', pathMatch: 'full' },
 
   {
     path: 'dashboard',
@@ -33,6 +33,12 @@ const routes: Routes = [
     canActivate: [],
     loadChildren: () =>
       import('./settings/settings.module').then((m) => m.SettingsModule),
+  },
+  {
+    path: 'auth',
+    canActivate: [],
+    loadChildren: () =>
+      import('./authentication/authentication.module').then((m) => m.AuthenticationModule),
   },
 
   { path: '**', component: PagenotfoundComponent, canActivate: [] },

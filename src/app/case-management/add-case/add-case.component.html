@@ -1,0 +1,17 @@
+
+<div class="form-container">
+    <h2>Case Form</h2>
+    <form #caseForm="ngForm" (ngSubmit)="onSubmit()">
+      <label for="caseName">Case Name:</label>
+      <input type="text" id="caseName" name="caseName" required [(ngModel)]="formData.caseName">
+      
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required [(ngModel)]="formData.description"></textarea>
+      
+      <label for="creationDateTime">Creation Date and Time:</label>
+      <input type="datetime-local" id="creationDateTime" name="creationDateTime" required [(ngModel)]="formData.creationDateTime">
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  

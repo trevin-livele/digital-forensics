@@ -2,33 +2,31 @@
   <div class="grid-container">
     <div class="card">
       <div class="card-content">
-        <div class="value">50</div>
+        <div class="value">{{ dashboardData.caseCount }}</div>
         <div class="description">Cases</div>
         <div class="icon"><i class="fas fa-users"></i></div>
       </div>
     </div>
     <div class="card">
       <div class="card-content">
-        <div class="value">5</div>
-        <div class="description">Data Analysis
-        </div>
+        <div class="value">{{ dashboardData.dataAnalysisCount }}</div>
+        <div class="description">Data Analysis</div>
         <div class="icon"><i class="fas fa-users"></i></div>
       </div>
     </div>
     <div class="card">
       <div class="card-content">
-        <div class="value">50,000</div>
+        <div class="value">{{ dashboardData.reportCount }}</div>
         <div class="description">Reports</div>
         <div class="icon"><i class="fas fa-users"></i></div>
       </div>
     </div>
     <div class="card">
       <div class="card-content">
-        <div class="value">50,000</div>
-        <div class="description">Device Inventory
-        </div>
+        <div class="value">{{ dashboardData.deviceInventoryCount }}</div>
+        <div class="description">Device Inventory</div>
         <div class="icon"><i class="fas fa-users"></i></div>
       </div>
     </div>
-    </div>
   </div>
+</div>

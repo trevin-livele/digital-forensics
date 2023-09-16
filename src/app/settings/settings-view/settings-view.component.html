@@ -1,1 +1,12 @@
-<p>settings-view works!</p>
+<div class="settings">
+    <h2>Application Settings</h2>
+    <label for="appName">App Name:</label>
+    <input type="text" id="appName" [(ngModel)]="appName" (blur)="saveSettings()">
+    <br>
+    <label for="notificationsEnabled">Notifications:</label>
+    <input type="checkbox" id="notificationsEnabled" [(ngModel)]="notificationsEnabled" (change)="saveSettings()">
+    <br>
+    <label for="darkModeEnabled">Dark Mode:</label>
+    <input type="checkbox" id="darkModeEnabled" [(ngModel)]="darkModeEnabled" (change)="saveSettings()">
+  </div>
+  

@@ -1,1 +1,24 @@
-<p>case-management-view works!</p>
+
+
+<mat-card class="crad-btn">
+  <mat-card-content>Cases</mat-card-content>
+  <button routerLink="/case-management/add-case" class="custom-button">Add Case</button>
+</mat-card>
+
+
+
+<section>
+  <div class="folder-shapes">
+    <div class="folder" *ngFor="let caseItem of cases">
+      <div class="top"></div>
+      <div class="head">
+        <div class="icon">📁</div>
+        <div class="dot2">•.•</div>
+      </div>
+      <div class="info">
+        <h1>{{ caseItem.caseName }}</h1>
+        <p><span>></span> {{ caseItem.files.length }} items</p>
+      </div>
+    </div>
+  </div>
+</section>
