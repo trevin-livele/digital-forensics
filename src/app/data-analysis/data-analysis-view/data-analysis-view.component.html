@@ -1,1 +1,34 @@
-<p>data-analysis-view works!</p>
+<canvas
+  baseChart
+  class="chart"
+  [data]="barChartData"
+  [options]="barChartOptions"
+  [plugins]="barChartPlugins"
+  [type]="barChartType"
+  (chartHover)="chartHovered($event)"
+  (chartClick)="chartClicked($event)"
+>
+</canvas>
+
+<button mat-button mat-raised-button color="primary" (click)="randomize()">
+  Update
+</button>
+
+
+
+
+<!-- <div class="form-container">
+    <h2>Case Form</h2>
+    <form id="case-form">
+        <label for="caseName">Case Name:</label>
+        <input type="text" id="caseName" name="caseName" required>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        
+        <label for="creationDateTime">Creation Date and Time:</label>
+        <input type="datetime-local" id="creationDateTime" name="creationDateTime" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+</div> -->
